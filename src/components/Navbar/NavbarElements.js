@@ -10,10 +10,13 @@ const ChangeColor = css`
 export const NavbarContainer = styled.div`
   width: 100vw;
   height: 80px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #fde7e7;
 `;
 
 export const MenuContainer = styled.div`
@@ -22,47 +25,42 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuDogIcon = styled(Link)`
-  text-decoration: none;
   font-size: 2rem;
-  padding: 5px;
+  text-decoration: none;
+  padding: 0 20px;
 
   ${ChangeColor}
 `;
 
 export const MenuShop = styled(Link)`
-  font-size: 2rem;
   text-decoration: none;
-  text-transform: uppercase;
+  padding-right: 20px;
 
   ${ChangeColor}
 `;
 
 export const MenuAbout = styled(Link)`
-  font-size: 2rem;
   text-decoration: none;
-  text-transform: uppercase;
 
   ${ChangeColor}
 `;
 
 export const MenuChatIcon = styled(Link)`
   text-decoration: none;
-  font-size: 1.8rem;
-
-  ${ChangeColor}
+  padding-right: 20px;
+  ${ChangeColor};
 `;
 
 export const MenuCartIcon = styled(Link)`
   text-decoration: none;
-  font-size: 1.8rem;
+  padding-right: 20px;
 
   ${ChangeColor}
 `;
 
 export const Login = styled(Link)`
   text-decoration: none;
-  font-size: 2rem;
-  text-transform: uppercase;
+  padding-right: 20px;
 
   ${ChangeColor}
 `;
