@@ -23,9 +23,14 @@ export const SlideContainer = styled.div`
   position: relative;
 `;
 
-export const SlideBtn = styled.div`
-  width: 120px;
+export const SlideBtn = styled.button`
+  outline: none;
+  border: none;
   border-bottom: 3px solid black;
+  cursor: pointer;
+  width: 120px;
+  padding: 10px;
+  background-color: Transparent;
   position: absolute;
   top: 80%;
   right: ${(props) => {
@@ -48,6 +53,16 @@ export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const Slide = styled.div`
+  opacity: ${(props) => (props.condition === "slideActive" ? 1 : 0)};
+  transition-duration: ${(props) =>
+    props.condition === "slideActive" ? "1s" : "1s ease"};
+  transform: ${(props) =>
+    props.condition === "slideActive" ? "scale(1.08)" : null};
+`;
+
 export const SlideImg = styled.img`
   width: 650px;
+  height: 100%;
 `;

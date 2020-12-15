@@ -2,6 +2,9 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 const ChangeColor = css`
+  &:link {
+    color: black;
+  }
   &:visited {
     color: black;
   }
