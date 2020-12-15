@@ -7,7 +7,7 @@ const ChangeColor = css`
   }
 `;
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.nav`
   width: 100vw;
   height: 80px;
   margin: 0 auto;
@@ -16,7 +16,6 @@ export const NavbarContainer = styled.div`
   align-items: center;
   font-size: 1.5rem;
   text-transform: uppercase;
-  background-color: #fde7e7;
 `;
 
 export const MenuContainer = styled.div`
@@ -25,7 +24,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuDogIcon = styled(Link)`
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-decoration: none;
   padding: 0 20px;
 
