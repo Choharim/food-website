@@ -11,6 +11,7 @@ const ChangeColor = css`
 `;
 
 export const NavbarContainer = styled.nav`
+  background-color: #fde7e7;
   width: 100vw;
   height: 80px;
   margin: 0 auto;

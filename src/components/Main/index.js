@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
 import { MainImgData } from "./MainImgData";
 import {
   MainBg,
@@ -42,9 +41,8 @@ const Main = () => {
 
   return (
     <MainBg>
-      <Navbar />
+      <MainHeader>happy dog</MainHeader>
       <MainContainer>
-        <MainHeader>happy dog</MainHeader>
         <SlideContainer>
           <SlideBtn left onClick={preSlide} />
           <SlideBtn right onClick={nextSlide} />

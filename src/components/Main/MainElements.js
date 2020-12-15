@@ -2,28 +2,43 @@ import styled, { keyframes } from "styled-components";
 
 export const MainBg = styled.div`
   background-color: #fde7e7;
-  height: 100vh;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const moveSlide = keyframes`
- from {bottom: -100%;}
-  to {bottom: 10%;}
+const movePage = keyframes`
+ from {bottom: 35%;}
+  to {bottom: 16%;}
 `;
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
-  bottom: 10%;
-  animation: ${moveSlide} 3s ease;
+  animation: ${movePage} 2s ease 1s forwards;
+  bottom: 35%;
+`;
+
+const ChangeFontSize = keyframes`
+from {
+  font-size: 15rem;
+  bottom: 0;}
+ to {
+  font-size: 3.5rem;
+  bottom: 13%;}
 `;
 
 export const MainHeader = styled.h1`
   font-family: "Dancing Script", cursive;
-  font-size: 3rem;
   text-transform: uppercase;
-  margin: 0 auto;
+  position: relative;
+  animation: ${ChangeFontSize} 3s ease 1s forwards;
+  font-size: 15rem;
+  z-index: 10;
 `;
 
 export const SlideContainer = styled.div`

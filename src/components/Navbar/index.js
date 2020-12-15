@@ -22,7 +22,7 @@ const Navbar = () => {
             <MdPets />
           </MenuDogIcon>
           <MenuShop to="/shop">shop</MenuShop>
-          <MenuAbout t0="/about">about</MenuAbout>
+          <MenuAbout to="/about">about</MenuAbout>
         </MenuContainer>
         <MenuContainer>
           <MenuChatIcon>
