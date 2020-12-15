@@ -49,20 +49,20 @@ export const MenuAbout = styled(Link)`
 
 export const MenuChatIcon = styled(Link)`
   text-decoration: none;
-  padding-right: 20px;
+  padding-right: 25px;
   ${ChangeColor};
 `;
 
 export const MenuCartIcon = styled(Link)`
   text-decoration: none;
-  padding-right: 20px;
+  padding-right: 25px;
 
   ${ChangeColor}
 `;
 
 export const Login = styled(Link)`
   text-decoration: none;
-  padding-right: 20px;
+  padding-right: 40px;
 
   ${ChangeColor}
 `;

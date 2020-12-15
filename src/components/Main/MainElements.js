@@ -1,15 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const MainBg = styled.div`
   background-color: #fde7e7;
   height: 100vh;
 `;
 
+const moveSlide = keyframes`
+ from {bottom: -100%;}
+  to {bottom: 10%;}
+`;
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  bottom: 10%;
+  animation: ${moveSlide} 3s ease;
 `;
 
 export const MainHeader = styled.h1`
