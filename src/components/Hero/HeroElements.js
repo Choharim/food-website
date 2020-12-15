@@ -85,6 +85,6 @@ export const Slide = styled.div`
 `;
 
 export const SlideImg = styled.img`
-  width: 650px;
+  width: 800px;
   height: 100%;
 `;

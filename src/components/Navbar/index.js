@@ -31,7 +31,7 @@ const Navbar = () => {
           <MenuCartIcon to="/mycart">
             <FiShoppingCart />
           </MenuCartIcon>
-          <Login to="/login">login</Login>
+          <Login to="/auth">login</Login>
         </MenuContainer>
       </NavbarContainer>
     </>
