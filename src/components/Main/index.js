@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MainImgData } from "./MainImgData";
 import {
   MainBg,
@@ -14,6 +14,11 @@ import {
 const Main = () => {
   const [current, setCurrent] = useState(0);
   const DataCount = MainImgData.length;
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    setInit(true);
+  }, []);
 
   const preSlide = () => {
     let currentSlide;
@@ -40,26 +45,34 @@ const Main = () => {
   }
 
   return (
-    <MainBg>
-      <MainHeader>happy dog</MainHeader>
-      <MainContainer>
-        <SlideContainer>
-          <SlideBtn left onClick={preSlide} />
-          <SlideBtn right onClick={nextSlide} />
-          <ImgContainer>
-            {MainImgData.map((slide, index) => {
-              return (
-                <Slide condition={index === current ? "slideActive" : "slide"}>
-                  {index === current && (
-                    <SlideImg key={index} src={slide.image} alt="food" />
-                  )}
-                </Slide>
-              );
-            })}
-          </ImgContainer>
-        </SlideContainer>
-      </MainContainer>
-    </MainBg>
+    <>
+      {init ? (
+        <MainBg>
+          <MainHeader>happy dog</MainHeader>
+          <MainContainer>
+            <SlideContainer>
+              <SlideBtn left onClick={preSlide} />
+              <SlideBtn right onClick={nextSlide} />
+              <ImgContainer>
+                {MainImgData.map((slide, index) => {
+                  return (
+                    <Slide
+                      condition={index === current ? "slideActive" : "slide"}
+                    >
+                      {index === current && (
+                        <SlideImg key={index} src={slide.image} alt="food" />
+                      )}
+                    </Slide>
+                  );
+                })}
+              </ImgContainer>
+            </SlideContainer>
+          </MainContainer>
+        </MainBg>
+      ) : (
+        "initializing"
+      )}
+    </>
   );
 };
 

@@ -19,7 +19,7 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  animation: ${movePage} 2s ease 1s forwards;
+  animation: ${movePage} 2s ease 0.6s forwards;
   bottom: 35%;
 `;
 
@@ -36,7 +36,7 @@ export const MainHeader = styled.h1`
   font-family: "Dancing Script", cursive;
   text-transform: uppercase;
   position: relative;
-  animation: ${ChangeFontSize} 3s ease 1s forwards;
+  animation: ${ChangeFontSize} 3s ease 0.6s forwards;
   font-size: 15rem;
   z-index: 10;
 `;
