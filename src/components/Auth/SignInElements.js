@@ -39,7 +39,6 @@ export const PasswordContainer = styled.div`
 `;
 
 export const PasswordText = styled.span`
-  text-transform: uppercase;
   font-weight: 300;
 `;
 

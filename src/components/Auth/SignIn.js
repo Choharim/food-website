@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  SignUpBtn,
   SubmitForm,
   EmailContainer,
   EmailText,
@@ -16,7 +15,7 @@ const SignIn = () => {
     <>
       <SubmitForm>
         <EmailContainer>
-          <EmailText>UserName or Email Address</EmailText>
+          <EmailText>User ID or Email Address</EmailText>
           <EmailInput
             name="email"
             type="email"
@@ -24,7 +23,7 @@ const SignIn = () => {
           ></EmailInput>
         </EmailContainer>
         <PasswordContainer>
-          <PasswordText>password</PasswordText>
+          <PasswordText>Password</PasswordText>
           <PasswordInput
             name="password"
             type="password"

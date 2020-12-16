@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   SubmitForm,
@@ -21,42 +21,85 @@ import {
 } from "./SignUpElements";
 
 const SignUp = () => {
+  const [userName, setName] = useState("");
+  const [userID, setUserID] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [userInfo, setUserInfo] = useState();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setUserInfo({
+      userName,
+      userID,
+      email,
+      password,
+    });
+  };
+
+  const submitInfo = (event) => {
+    const {
+      target: { value, name },
+    } = event;
+
+    if (name === "userName") {
+      setName(value);
+    }
+    if (name === "userID") {
+      setUserID(value);
+    }
+    if (name === "email") {
+      setEmail(value);
+    }
+    if (name === "password") {
+      setPassword(value);
+    }
+  };
+
   return (
     <>
-      <SubmitForm>
+      <SubmitForm onSubmit={handleSubmit}>
         <Container>
           <NameContainer>
-            <NameText>name</NameText>
+            <NameText>User Name</NameText>
             <NameInput
-              name="name"
-              type="text"
-              placeholder="Write your name"
-            ></NameInput>
-          </NameContainer>
-          <UserNameContainer>
-            <UserNameText>username</UserNameText>
-            <UserNameInput
               name="userName"
               type="text"
+              placeholder="Write your name"
+              onChange={submitInfo}
+              value={userName}
+            />
+          </NameContainer>
+          <UserNameContainer>
+            <UserNameText>User ID</UserNameText>
+            <UserNameInput
+              name="userID"
+              type="text"
               placeholder="Write your ID"
-            ></UserNameInput>
+              onChange={submitInfo}
+              value={userID}
+            />
           </UserNameContainer>
         </Container>
         <EmailContainer>
-          <EmailText>email</EmailText>
+          <EmailText>Email</EmailText>
           <EmailInput
             name="email"
             type="email"
             placeholder="Write your Email"
-          ></EmailInput>
+            onChange={submitInfo}
+            value={email}
+          />
         </EmailContainer>
         <PasswordContainer>
-          <PasswordText>password</PasswordText>
+          <PasswordText>Password</PasswordText>
           <PasswordInput
             name="password"
             type="password"
             placeholder="Write 6+ charcters"
-          ></PasswordInput>
+            onChange={submitInfo}
+            value={password}
+          />
         </PasswordContainer>
         <CheckBoxContainer>
           <CheckBox type="checkbox" name="confrim"></CheckBox>

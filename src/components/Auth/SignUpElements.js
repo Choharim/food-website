@@ -19,7 +19,6 @@ export const NameContainer = styled.div`
 `;
 
 export const NameText = styled.span`
-  text-transform: uppercase;
   font-weight: 300;
 `;
 
@@ -45,7 +44,6 @@ export const UserNameContainer = styled.div`
 `;
 
 export const UserNameText = styled.span`
-  text-transform: uppercase;
   font-weight: 300;
 `;
 
@@ -59,7 +57,6 @@ export const EmailContainer = styled.div`
 `;
 
 export const EmailText = styled.span`
-  text-transform: uppercase;
   font-weight: 300;
 `;
 
@@ -73,7 +70,6 @@ export const PasswordContainer = styled.div`
 `;
 
 export const PasswordText = styled.span`
-  text-transform: uppercase;
   font-weight: 300;
 `;
 
