@@ -10,7 +10,7 @@ export const MainBg = styled.div`
 
 const movePage = keyframes`
  from {bottom: 35%;}
-  to {bottom: 16%;}
+  to {bottom: 18%;}
 `;
 
 export const MainContainer = styled.div`
@@ -25,11 +25,11 @@ export const MainContainer = styled.div`
 
 const ChangeFontSize = keyframes`
 from {
-  font-size: 15rem;
+  font-size: 13rem;
   bottom: 0;}
  to {
   font-size: 3.5rem;
-  bottom: 13%;}
+  bottom: 14.5%;}
 `;
 
 export const MainHeader = styled.h1`
@@ -37,7 +37,7 @@ export const MainHeader = styled.h1`
   text-transform: uppercase;
   position: relative;
   animation: ${ChangeFontSize} 3s ease 0.6s forwards;
-  font-size: 15rem;
+  font-size: 13rem;
   z-index: 10;
 `;
 

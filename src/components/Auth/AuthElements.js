@@ -31,7 +31,6 @@ export const AuthContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
 `;
 
 export const SignInBtn = styled.button`
@@ -41,28 +40,40 @@ export const SignInBtn = styled.button`
   background-color: transparent;
   color: #df6c7e;
   font-size: 1.3rem;
+  padding: 5px;
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
 `;
 
 export const Container = styled.div`
+  width: 70%;
+  height: 100px;
   display: flex;
-  height: 200px;
+  justify-content: space-between;
 `;
 
 export const NameContainer = styled.div``;
 
-export const NameText = styled.span``;
+export const NameText = styled.span`
+  text-transform: uppercase;
+  font-weight: 300;
+`;
 
 export const NameForm = styled.form``;
 
-export const NameInput = styled.input``;
+export const NameInput = styled.input`
+  padding: 10px;
+  width: 80%;
+`;
 
 export const UserNameContainer = styled.div``;
 
-export const UserNameText = styled.span``;
+export const UserNameText = styled.span`
+  text-transform: uppercase;
+  font-weight: 300;
+`;
 
 export const UserNameForm = styled.form``;
 
