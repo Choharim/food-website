@@ -1,30 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const SignInContainer = styled.div`
-  background-color: #f5e9e3;
-  flex-grow: 1;
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: ${(props) => (props.signIn ? "flex" : "none")};
-`;
-
-export const SignUpBtn = styled.button`
-  text-transform: uppercase;
-  outline: none;
-  border-style: none;
-  background-color: transparent;
-  color: #df6c7e;
-  font-size: 1.3rem;
-  padding: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-`;
-
 const InputStyle = css`
   padding: 10px 0;
   width: 100%;

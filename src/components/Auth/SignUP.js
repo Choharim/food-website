@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  SignUpContainer,
   Container,
-  SignInBtn,
   SubmitForm,
   NameContainer,
   NameText,
@@ -22,10 +20,9 @@ import {
   SignUpBtn,
 } from "./SignUpElements";
 
-const SignUp = ({ signInUpToggle, signIn }) => {
+const SignUp = () => {
   return (
-    <SignUpContainer signIn={signIn}>
-      <SignInBtn onClick={signInUpToggle}>sign in</SignInBtn>
+    <>
       <SubmitForm>
         <Container>
           <NameContainer>
@@ -70,7 +67,7 @@ const SignUp = ({ signInUpToggle, signIn }) => {
         </CheckBoxContainer>
         <SignUpBtn>Create Account</SignUpBtn>
       </SubmitForm>
-    </SignUpContainer>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  SignInContainer,
   SignUpBtn,
   SubmitForm,
   EmailContainer,
@@ -12,10 +11,9 @@ import {
   SignInBtn,
 } from "./SignInElements";
 
-const SignIn = ({ signInUpToggle, signIn }) => {
+const SignIn = () => {
   return (
-    <SignInContainer signIn={signIn}>
-      <SignUpBtn onClick={signInUpToggle}>sign up</SignUpBtn>
+    <>
       <SubmitForm>
         <EmailContainer>
           <EmailText>UserName or Email Address</EmailText>
@@ -35,7 +33,7 @@ const SignIn = ({ signInUpToggle, signIn }) => {
         </PasswordContainer>
         <SignInBtn>Sign In</SignInBtn>
       </SubmitForm>
-    </SignInContainer>
+    </>
   );
 };
 

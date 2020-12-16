@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { BgImage, InfoContainer, InfoText } from "./AuthElements";
+import {
+  BgImage,
+  InfoContainer,
+  InfoText,
+  AuthContainer,
+  SignInUpBtn,
+} from "./AuthElements";
 import SignIn from "./SignIn";
 import SignUp from "./SignUP";
 
@@ -15,8 +21,20 @@ const Auth = () => {
       <InfoContainer>
         <InfoText>Once a dog loves you, it loves you till the end.</InfoText>
       </InfoContainer>
-      <SignIn signInUpToggle={signInUpToggle} signIn={signIn} />
-      <SignUp signInUpToggle={signInUpToggle} signIn={signIn} />
+      <SignInUpBtn onClick={signInUpToggle}>
+        {signIn ? "sign up" : "sign in"}
+      </SignInUpBtn>
+      <AuthContainer>
+        {signIn ? (
+          <>
+            <SignIn />
+          </>
+        ) : (
+          <>
+            <SignUp />
+          </>
+        )}
+      </AuthContainer>
     </BgImage>
   );
 };

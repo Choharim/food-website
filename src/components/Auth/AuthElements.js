@@ -23,3 +23,27 @@ export const InfoText = styled.h1`
   overflow-wrap: normal;
   line-height: 50px;
 `;
+
+export const AuthContainer = styled.div`
+  background-color: #f5e9e3;
+  flex-grow: 1;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SignInUpBtn = styled.button`
+  text-transform: uppercase;
+  outline: none;
+  border-style: none;
+  background-color: transparent;
+  color: #df6c7e;
+  font-size: 1.3rem;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+`;

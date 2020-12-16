@@ -1,29 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const SignUpContainer = styled.div`
-  background-color: #f5e9e3;
-  flex-grow: 1;
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  display: ${(props) => (props.signIn ? "none" : "flex")};
-`;
-
-export const SignInBtn = styled.button`
-  text-transform: uppercase;
-  outline: none;
-  border-style: none;
-  background-color: transparent;
-  color: #df6c7e;
-  font-size: 1.3rem;
-  padding: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-`;
-
 export const SubmitForm = styled.form`
   display: flex;
   flex-direction: column;
