@@ -8,6 +8,7 @@ export const SignUpContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: ${(props) => (props.signIn ? "none" : "flex")};
 `;
 
 export const SignInBtn = styled.button`

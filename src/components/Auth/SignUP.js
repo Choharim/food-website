@@ -24,20 +24,11 @@ import {
   CheckBoxText,
   SignUpBtn,
 } from "./SignUpElements";
-import axios from "axios";
 
-const SignUp = () => {
-  const [signIn, setSignIn] = useState(false);
-
-  const signInUpToggle = () => {
-    setSignIn(!signIn);
-  };
-
+const SignUp = ({ signInUpToggle, signIn }) => {
   return (
-    <SignUpContainer>
-      <SignInBtn onClick={signInUpToggle} check={signIn}>
-        sign in
-      </SignInBtn>
+    <SignUpContainer signIn={signIn}>
+      <SignInBtn onClick={signInUpToggle}>sign in</SignInBtn>
       <Container>
         <NameContainer>
           <NameText>name</NameText>

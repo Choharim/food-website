@@ -13,10 +13,10 @@ import {
   SignInBtn,
 } from "./SignInElements";
 
-const SignIn = () => {
+const SignIn = ({ signInUpToggle, signIn }) => {
   return (
-    <SignInContainer>
-      <SignUpBtn>sign up</SignUpBtn>
+    <SignInContainer signIn={signIn}>
+      <SignUpBtn onClick={signInUpToggle}>sign up</SignUpBtn>
       <EmailContainer>
         <EmailText>UserName or Email Address</EmailText>
         <EmailForm>

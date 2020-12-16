@@ -4,14 +4,19 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUP";
 
 const Auth = () => {
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(true);
+
+  const signInUpToggle = () => {
+    setSignIn(!signIn);
+  };
 
   return (
     <BgImage>
       <InfoContainer>
         <InfoText>Once a dog loves you, it loves you till the end.</InfoText>
       </InfoContainer>
-      {!signIn ? <SignIn /> : <SignUp />}
+      <SignIn signInUpToggle={signInUpToggle} signIn={signIn} />
+      <SignUp signInUpToggle={signInUpToggle} signIn={signIn} />
     </BgImage>
   );
 };
