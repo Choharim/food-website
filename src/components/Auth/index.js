@@ -29,13 +29,19 @@ const Auth = () => {
             <NameContainer>
               <NameText>name</NameText>
               <NameForm>
-                <NameInput></NameInput>
+                <NameInput
+                  type="text"
+                  placeholder="Write your name"
+                ></NameInput>
               </NameForm>
             </NameContainer>
             <UserNameContainer>
               <UserNameText>username</UserNameText>
               <UserNameForm>
-                <UserNameInput></UserNameInput>
+                <UserNameInput
+                  type="text"
+                  placeholder="Write your ID"
+                ></UserNameInput>
               </UserNameForm>
             </UserNameContainer>
           </Container>

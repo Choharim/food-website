@@ -54,27 +54,42 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const NameContainer = styled.div``;
+export const NameContainer = styled.div`
+  width: 50%;
+  padding-right: 10px;
+`;
 
 export const NameText = styled.span`
   text-transform: uppercase;
   font-weight: 300;
 `;
 
-export const NameForm = styled.form``;
-
-export const NameInput = styled.input`
-  padding: 10px;
-  width: 80%;
+export const NameForm = styled.form`
+  padding-top: 5px;
 `;
 
-export const UserNameContainer = styled.div``;
+export const NameInput = styled.input`
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+`;
+
+export const UserNameContainer = styled.div`
+  width: 50%;
+  padding-left: 10px;
+`;
 
 export const UserNameText = styled.span`
   text-transform: uppercase;
   font-weight: 300;
 `;
 
-export const UserNameForm = styled.form``;
+export const UserNameForm = styled.form`
+  padding-top: 5px;
+`;
 
-export const UserNameInput = styled.input``;
+export const UserNameInput = styled.input`
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+`;
