@@ -37,8 +37,15 @@ const InputStyle = css`
   }
 `;
 
-export const EmailContainer = styled.div`
+export const SubmitForm = styled.form`
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const EmailContainer = styled.div`
+  width: 100%;
   height: 100px;
 `;
 
@@ -46,16 +53,13 @@ export const EmailText = styled.span`
   font-weight: 300;
 `;
 
-export const EmailForm = styled.form`
-  padding-top: 5px;
-`;
-
 export const EmailInput = styled.input`
   ${InputStyle}
+  margin-top:10px;
 `;
 
 export const PasswordContainer = styled.div`
-  width: 70%;
+  width: 100%;
   margin-bottom: 10px;
 `;
 
@@ -64,16 +68,13 @@ export const PasswordText = styled.span`
   font-weight: 300;
 `;
 
-export const PasswordForm = styled.form`
-  padding-top: 5px;
-`;
-
 export const PasswordInput = styled.input`
   ${InputStyle}
+  margin-top:10px;
 `;
 
 export const SignInBtn = styled.button`
-  width: 40%;
+  width: 50%;
   height: 50px;
   margin-top: 20px;
   background-color: #df6c7e;
@@ -84,5 +85,5 @@ export const SignInBtn = styled.button`
   font-size: 1.3rem;
   cursor: pointer;
   position: relative;
-  left: -15%;
+  left: -25%;
 `;
