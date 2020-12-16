@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import BgImg from "../../images/Bg.jpg";
 
 export const BgImage = styled.div`
@@ -23,7 +23,7 @@ export const InfoText = styled.h1`
   overflow-wrap: normal;
   line-height: 50px;
 `;
-export const AuthContainer = styled.div`
+export const SignUpContainer = styled.div`
   background-color: #f5e9e3;
   flex-grow: 1;
   flex-basis: 50%;
@@ -68,10 +68,20 @@ export const NameForm = styled.form`
   padding-top: 5px;
 `;
 
-export const NameInput = styled.input`
+const InputStyle = css`
   padding: 10px 0;
   width: 100%;
   text-align: center;
+  outline: none;
+  border: 1px solid #fad1e1;
+  border-radius: 8px;
+  &:focus {
+    box-shadow: 0 0 5px 3px #fad1e1;
+  }
+`;
+
+export const NameInput = styled.input`
+  ${InputStyle}
 `;
 
 export const UserNameContainer = styled.div`
@@ -89,7 +99,71 @@ export const UserNameForm = styled.form`
 `;
 
 export const UserNameInput = styled.input`
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
+  ${InputStyle}
+`;
+
+export const EmailContainer = styled.div`
+  width: 70%;
+  height: 100px;
+`;
+
+export const EmailText = styled.span`
+  text-transform: uppercase;
+  font-weight: 300;
+`;
+
+export const EmailForm = styled.form`
+  padding-top: 5px;
+`;
+
+export const EmailInput = styled.input`
+  ${InputStyle}
+`;
+
+export const PasswordContainer = styled.div`
+  width: 70%;
+  margin-bottom: 10px;
+`;
+
+export const PasswordText = styled.span`
+  text-transform: uppercase;
+  font-weight: 300;
+`;
+
+export const PasswordForm = styled.form`
+  padding-top: 5px;
+`;
+
+export const PasswordInput = styled.input`
+  ${InputStyle}
+`;
+
+export const CheckBoxContainer = styled.div`
+  width: 70%;
+  margin-bottom: 15px;
+`;
+
+export const CheckBox = styled.input`
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+`;
+
+export const CheckBoxText = styled.span`
+  overflow-wrap: normal;
+`;
+
+export const SignUpBtn = styled.button`
+  width: 40%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #df6c7e;
+  color: white;
+  outline: none;
+  border: 1px solid #df6c7e;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  left: -15%;
 `;
