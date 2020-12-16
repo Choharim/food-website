@@ -7,7 +7,6 @@ export const SignUpContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   display: ${(props) => (props.signIn ? "none" : "flex")};
 `;
 
@@ -25,6 +24,12 @@ export const SignInBtn = styled.button`
   right: 15px;
 `;
 
+export const SubmitForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const Container = styled.div`
   width: 70%;
   height: 100px;
@@ -40,10 +45,6 @@ export const NameContainer = styled.div`
 export const NameText = styled.span`
   text-transform: uppercase;
   font-weight: 300;
-`;
-
-export const NameForm = styled.form`
-  padding-top: 5px;
 `;
 
 const InputStyle = css`
@@ -72,10 +73,6 @@ export const UserNameText = styled.span`
   font-weight: 300;
 `;
 
-export const UserNameForm = styled.form`
-  padding-top: 5px;
-`;
-
 export const UserNameInput = styled.input`
   ${InputStyle}
 `;
@@ -90,10 +87,6 @@ export const EmailText = styled.span`
   font-weight: 300;
 `;
 
-export const EmailForm = styled.form`
-  padding-top: 5px;
-`;
-
 export const EmailInput = styled.input`
   ${InputStyle}
 `;
@@ -106,10 +99,6 @@ export const PasswordContainer = styled.div`
 export const PasswordText = styled.span`
   text-transform: uppercase;
   font-weight: 300;
-`;
-
-export const PasswordForm = styled.form`
-  padding-top: 5px;
 `;
 
 export const PasswordInput = styled.input`
