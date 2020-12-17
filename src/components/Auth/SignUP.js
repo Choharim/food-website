@@ -21,21 +21,27 @@ import {
 } from "./SignUpElements";
 
 const SignUp = () => {
-  const [userName, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [userID, setUserID] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [checkBox, setCheckBox] = useState(true);
+  const setUserInfo = {
+    userName,
+    userID,
+    email,
+    password,
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (userName && userID && email && password && password.length > 6) {
-      const setUserInfo = {
-        userName,
-        userID,
-        email,
-        password,
-      };
-      localStorage.setItem("currentUser", JSON.stringify(setUserInfo));
+      localStorage.setItem("users", JSON.stringify(setUserInfo));
+      setUserName("");
+      setUserID("");
+      setEmail("");
+      setPassword("");
+      setCheckBox(true);
     }
   };
 
@@ -45,7 +51,7 @@ const SignUp = () => {
     } = event;
 
     if (name === "userName") {
-      setName(value);
+      setUserName(value);
     }
     if (name === "userID") {
       setUserID(value);
@@ -56,6 +62,10 @@ const SignUp = () => {
     if (name === "password") {
       setPassword(value);
     }
+  };
+
+  const checkToggle = () => {
+    setCheckBox(!checkBox);
   };
 
   return (
@@ -104,7 +114,12 @@ const SignUp = () => {
           />
         </PasswordContainer>
         <CheckBoxContainer>
-          <CheckBox type="checkbox" name="confrim"></CheckBox>
+          <CheckBox
+            type="checkbox"
+            name="checkbox"
+            checked={checkBox}
+            onClick={checkToggle}
+          ></CheckBox>
           <CheckBoxText>
             Create an account means you're okay with our Term of Service,
             Privacy Policy, and our default Notification Settings.
