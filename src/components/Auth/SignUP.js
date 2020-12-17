@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   SubmitForm,
@@ -25,16 +25,18 @@ const SignUp = () => {
   const [userID, setUserID] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userInfo, setUserInfo] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setUserInfo({
-      userName,
-      userID,
-      email,
-      password,
-    });
+    if (userName && userID && email && password && password.length > 6) {
+      const setUserInfo = {
+        userName,
+        userID,
+        email,
+        password,
+      };
+      localStorage.setItem("currentUser", JSON.stringify(setUserInfo));
+    }
   };
 
   const submitInfo = (event) => {
@@ -108,7 +110,11 @@ const SignUp = () => {
             Privacy Policy, and our default Notification Settings.
           </CheckBoxText>
         </CheckBoxContainer>
-        <SignUpBtn>Create Account</SignUpBtn>
+        <SignUpBtn
+          onSubmit={handleSubmit}
+          type="submit"
+          value="Create Account"
+        />
       </SubmitForm>
     </>
   );

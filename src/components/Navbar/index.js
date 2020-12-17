@@ -14,6 +14,13 @@ import { GrChat } from "react-icons/gr";
 import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
+  const [logIn, setLogIn] = useState(false);
+  const userInfo_LS = localStorage.getItem("currentUser");
+
+  if (JSON.parse(userInfo_LS) !== null) {
+    setLogIn(true);
+  }
+
   return (
     <>
       <NavbarContainer>
@@ -31,7 +38,9 @@ const Navbar = () => {
           <MenuCartIcon to="/mycart">
             <FiShoppingCart />
           </MenuCartIcon>
-          <Login to="/auth">login</Login>
+          <Login to={logIn ? "/" : "/auth"}>
+            {logIn ? "Log Out" : "Log In"}
+          </Login>
         </MenuContainer>
       </NavbarContainer>
     </>

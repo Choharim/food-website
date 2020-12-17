@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import BgImg from "../../images/Bg.jpg";
 
@@ -7,6 +8,35 @@ export const BgImage = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${BgImg});
   display: flex;
+`;
+
+export const HomeIcon = styled(Link)`
+  font-size: 2.2rem;
+  text-decoration: none;
+  padding: 0 20px;
+  position: absolute;
+  top: 18px;
+  display: flex;
+  align-items: flex-end;
+
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+`;
+
+export const HomeText = styled.span`
+  font-size: 1.5rem;
+  padding-left: 10px;
+
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
 `;
 
 export const InfoContainer = styled.div`

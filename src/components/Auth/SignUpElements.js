@@ -92,7 +92,7 @@ export const CheckBoxText = styled.span`
   overflow-wrap: normal;
 `;
 
-export const SignUpBtn = styled.button`
+export const SignUpBtn = styled.input`
   width: 40%;
   height: 50px;
   margin-top: 20px;
