@@ -38,10 +38,30 @@ export const ItemName = styled.span`
 
 export const ItemPrice = styled.span`
   font-size: 1.1rem;
+  padding-bottom: 5px;
+`;
+
+export const ItemDescBtn = styled.button`
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #df6c7e;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  padding: 0 2px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;
 
 export const ItemDesc = styled.span`
   font-size: 0.8rem;
-  font-weight: 350;
-  padding: 5px 50px;
+  border: 2px solid #df6c7e;
+  border-radius: 13px;
+  padding: 5px;
+  width: 110px;
+  position: relative;
+  top: -20px;
+  left: 80px;
 `;
