@@ -19,7 +19,7 @@ const Shop = () => {
   return (
     <ShopContainer>
       <ProductsContainer>
-        <Menu />
+        <Menu menuItems={menuItems} />
       </ProductsContainer>
       <LoginIcon to="/auth">LOG IN</LoginIcon>
       <CartIcon to="/cart">
