@@ -25,7 +25,7 @@ const Menu = ({ menuItems }) => {
 
   return (
     <ItemsContainer>
-      {menuItems.map((item, index) => {
+      {menuItems.map((item) => {
         const { id, product, category, price, img, desc } = item;
         return (
           <ItemContainer key={id} category={category}>

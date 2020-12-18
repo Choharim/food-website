@@ -11,9 +11,11 @@ import {
 import SignIn from "./SignIn";
 import SignUp from "./SignUP";
 import { MdPets } from "react-icons/md";
+import Success from "./Success";
 
 const Auth = () => {
   const [signIn, setSignIn] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   const signInUpToggle = () => {
     setSignIn(!signIn);
@@ -32,13 +34,17 @@ const Auth = () => {
         {signIn ? "sign up" : "sign in"}
       </SignInUpBtn>
       <AuthContainer>
-        {signIn ? (
+        {success ? (
           <>
-            <SignIn />
+            <Success />
+          </>
+        ) : signIn ? (
+          <>
+            <SignIn setSuccess={setSuccess} />
           </>
         ) : (
           <>
-            <SignUp />
+            <SignUp setSuccess={setSuccess} />
           </>
         )}
       </AuthContainer>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import BgImg from "../../images/Bg.jpg";
+import BgImg from "../../images/authBg.jpg";
 
 export const BgImage = styled.div`
   height: 100vh;

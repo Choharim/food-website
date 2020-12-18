@@ -15,7 +15,6 @@ import {
 
 const Shop = () => {
   const [menuItems, setMenuItems] = useState(ShopData);
-  const [categories, setCategories] = useState([]);
 
   const filterItems = (category) => {
     if (category === "all") {

@@ -10,20 +10,16 @@ import {
   SignInBtn,
 } from "./SignInElements";
 
-const SignIn = ({ history }) => {
+const SignIn = ({ setSuccess }) => {
   const [userIDorAdd, setUserIDorAdd] = useState("");
   const [password, setPassword] = useState("");
-  const currentUser = {
-    userIDorAdd,
-    password,
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (userIDorAdd && password && password.length > 6) {
-      localStorage.setItem("currentUser", JSON.stringify(currentUser));
       setUserIDorAdd("");
       setPassword("");
+      setSuccess(true);
     }
   };
 

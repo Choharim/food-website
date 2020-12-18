@@ -20,29 +20,23 @@ import {
   SignUpBtn,
 } from "./SignUpElements";
 
-const SignUp = () => {
+const SignUp = ({ setSuccess }) => {
   const [userName, setUserName] = useState("");
   const [userID, setUserID] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkBox, setCheckBox] = useState(true);
-  const userObj = {
-    userName,
-    userID,
-    email,
-    password,
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (userName && userID && email && password && password.length > 6) {
-      localStorage.setItem("signUp", JSON.stringify(userObj));
       setUserName("");
       setUserID("");
       setEmail("");
       setPassword("");
       setCheckBox(true);
+      setSuccess(true);
     }
   };
 
