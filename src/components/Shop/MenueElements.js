@@ -19,7 +19,29 @@ export const ItemContainer = styled.div`
 export const ItemImg = styled.img`
   width: 200px;
   height: 200px;
+  margin-bottom: 10px;
   border-radius: 50%;
 `;
 
-export const ItemInfo = styled.div``;
+export const ItemInfo = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ItemName = styled.span`
+  font-size: 1.3rem;
+  font-weight: 550;
+  padding-bottom: 5px;
+`;
+
+export const ItemPrice = styled.span`
+  font-size: 1.1rem;
+`;
+
+export const ItemDesc = styled.span`
+  font-size: 0.8rem;
+  font-weight: 350;
+  padding: 5px 50px;
+`;

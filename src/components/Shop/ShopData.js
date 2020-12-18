@@ -67,7 +67,7 @@ export const ShopData = [
     category: "자연식",
     price: "9000 원",
     img: Pic2,
-    decs:
+    desc:
       "운동량이 많은 저지방 고단백의 캥거루 고기는 비만예방 및 다이어트 중인 반려견에게 아주 좋은 원재료입니다.",
     ingrediednts: [
       {
@@ -123,7 +123,7 @@ export const ShopData = [
     category: "자연식",
     price: "5000 원",
     img: Pic3,
-    decs:
+    desc:
       "지방이 거의 없는 고단백 재료로써 비타민이 많이 함유 되어 있으며 신진대사 활성화와 피부, 이빨, 뼈의 성장에 도움이 됩니다.",
     ingrediednts: [
       {
@@ -179,7 +179,7 @@ export const ShopData = [
     category: "간식",
     price: "6000 원",
     img: Pic4,
-    decs:
+    desc:
       "고단백 식품인 홍두깨살과 우엉을 함께 동그랗게 빚었습니다. 한 입 크기의 완자는 부드러운 식감으로 치아가 약한 강아지도 급여가 가능합니다.",
     ingrediednts: [
       {
@@ -209,7 +209,7 @@ export const ShopData = [
     category: "간식",
     price: "5000 원",
     img: Pic5,
-    decs:
+    desc:
       "고단백 식품인 홍두깨살과 우엉을 함께 동그랗게 빚었습니다. 한 입 크기의 완자는 부드러운 식감으로 치아가 약한 강아지도 급여가 가능합니다.",
     ingrediednts: [
       {
