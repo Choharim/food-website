@@ -47,7 +47,7 @@ export const PasswordInput = styled.input`
   margin-top:10px;
 `;
 
-export const SignInBtn = styled.button`
+export const SignInBtn = styled.input`
   width: 50%;
   height: 50px;
   margin-top: 20px;

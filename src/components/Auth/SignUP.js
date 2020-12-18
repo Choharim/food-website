@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Container,
   SubmitForm,
@@ -26,7 +26,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checkBox, setCheckBox] = useState(true);
-  const setUserInfo = {
+  const userObj = {
     userName,
     userID,
     email,
@@ -35,8 +35,9 @@ const SignUp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     if (userName && userID && email && password && password.length > 6) {
-      localStorage.setItem("users", JSON.stringify(setUserInfo));
+      localStorage.setItem("signUp", JSON.stringify(userObj));
       setUserName("");
       setUserID("");
       setEmail("");
