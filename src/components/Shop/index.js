@@ -7,6 +7,7 @@ import { ShopData } from "./ShopData";
 import {
   ShopContainer,
   ProductsContainer,
+  CategoriesContainer,
   LoginIcon,
   CartIcon,
   ExitBtn,
@@ -16,16 +17,24 @@ const Shop = () => {
   const [menuItems, setMenuItems] = useState(ShopData);
   const [categories, setCategories] = useState([]);
 
+  const filterItems = (category) => {
+    const newItems = ShopData.filter((item) => item.category === category);
+    setMenuItems(newItems);
+  };
+
   return (
     <ShopContainer>
       <ProductsContainer>
         <Menu menuItems={menuItems} />
       </ProductsContainer>
+      <CategoriesContainer>
+        <Categories filterItems={filterItems} />
+      </CategoriesContainer>
       <LoginIcon to="/auth">LOG IN</LoginIcon>
       <CartIcon to="/cart">
         <FiShoppingCart />
       </CartIcon>
-      <ExitBtn>
+      <ExitBtn to="/">
         <AiOutlineClose />
       </ExitBtn>
     </ShopContainer>

@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <NavbarContainer>
         <MenuContainer>
-          <MenuDogIcon to="/">
+          <MenuDogIcon>
             <MdPets />
           </MenuDogIcon>
           <MenuShop to="/shop">shop</MenuShop>

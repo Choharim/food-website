@@ -27,12 +27,9 @@ export const MenuContainer = styled.div`
   align-items: center;
 `;
 
-export const MenuDogIcon = styled(Link)`
+export const MenuDogIcon = styled.div`
   font-size: 2.2rem;
-  text-decoration: none;
   padding: 0 20px;
-
-  ${ChangeColor}
 `;
 
 export const MenuShop = styled(Link)`

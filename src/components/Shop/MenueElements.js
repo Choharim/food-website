@@ -17,8 +17,8 @@ export const ItemContainer = styled.div`
 `;
 
 export const ItemImg = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   margin-bottom: 10px;
   border-radius: 50%;
 `;
@@ -28,6 +28,7 @@ export const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
 
 export const ItemName = styled.span`
@@ -56,12 +57,11 @@ export const ItemDescBtn = styled.button`
 `;
 
 export const ItemDesc = styled.span`
-  font-size: 0.8rem;
   border: 2px solid #df6c7e;
   border-radius: 13px;
   padding: 5px;
   width: 110px;
-  position: relative;
-  top: -20px;
-  left: 80px;
+  position: absolute;
+  top: 0;
+  right: -15px;
 `;

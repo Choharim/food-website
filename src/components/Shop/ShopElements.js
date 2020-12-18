@@ -16,6 +16,15 @@ export const ProductsContainer = styled.div`
   background-color: #fde7e7;
 `;
 
+export const CategoriesContainer = styled.div`
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
+
 export const LoginIcon = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
@@ -45,10 +54,7 @@ export const CartIcon = styled(Link)`
     color: black;
   }
 `;
-export const ExitBtn = styled.button`
-  outline: none;
-  border: none;
-  background-color: transparent;
+export const ExitBtn = styled(Link)`
   color: white;
   font-size: 2rem;
   padding: 5px;
