@@ -8,13 +8,17 @@ import {
   MenuChatIcon,
   MenuCartIcon,
   Login,
+  LogOut,
 } from "./NavbarElements";
 import { MdPets } from "react-icons/md";
 import { GrChat } from "react-icons/gr";
 import { FiShoppingCart } from "react-icons/fi";
 
-const Navbar = () => {
-  const [logIn, setLogIn] = useState(false);
+const Navbar = ({ logIn, setLogIn, signUp, setSignUp }) => {
+  const logInOutToggel = () => {
+    setLogIn(false);
+    setSignUp(false);
+  };
 
   return (
     <>
@@ -33,7 +37,11 @@ const Navbar = () => {
           <MenuCartIcon to="/mycart">
             <FiShoppingCart />
           </MenuCartIcon>
-          <Login to="/auth">Log In</Login>
+          {logIn && signUp ? (
+            <LogOut onClick={logInOutToggel}>Log Out</LogOut>
+          ) : (
+            <Login to="/auth">Log In</Login>
+          )}
         </MenuContainer>
       </NavbarContainer>
     </>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  SignInContainer,
   SubmitForm,
   EmailContainer,
   EmailText,
@@ -8,9 +9,10 @@ import {
   PasswordText,
   PasswordInput,
   SignInBtn,
+  SignInUpBtn,
 } from "./SignInElements";
 
-const SignIn = ({ setSuccess }) => {
+const SignIn = ({ setLogIn, setSignUp, signInUpToggel }) => {
   const [userIDorAdd, setUserIDorAdd] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,7 +21,8 @@ const SignIn = ({ setSuccess }) => {
     if (userIDorAdd && password && password.length > 6) {
       setUserIDorAdd("");
       setPassword("");
-      setSuccess(true);
+      setLogIn(true);
+      setSignUp(true);
     }
   };
 
@@ -35,13 +38,13 @@ const SignIn = ({ setSuccess }) => {
   };
 
   return (
-    <>
+    <SignInContainer>
       <SubmitForm onSubmit={handleSubmit}>
         <EmailContainer>
           <EmailText>User ID or Email Address</EmailText>
           <EmailInput
             name="email"
-            type="email"
+            type="text"
             onChange={submitInfo}
             value={userIDorAdd}
             placeholder="Write your ID or Email"
@@ -59,7 +62,8 @@ const SignIn = ({ setSuccess }) => {
         </PasswordContainer>
         <SignInBtn type="submit" value="Sign In" />
       </SubmitForm>
-    </>
+      <SignInUpBtn onClick={signInUpToggel}>sign up</SignInUpBtn>
+    </SignInContainer>
   );
 };
 

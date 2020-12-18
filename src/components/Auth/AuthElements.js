@@ -63,17 +63,3 @@ export const AuthContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const SignInUpBtn = styled.button`
-  text-transform: uppercase;
-  outline: none;
-  border-style: none;
-  background-color: transparent;
-  color: #df6c7e;
-  font-size: 1.3rem;
-  padding: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-`;

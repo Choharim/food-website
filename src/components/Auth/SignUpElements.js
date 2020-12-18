@@ -1,5 +1,12 @@
 import styled, { css } from "styled-components";
 
+export const SignUpContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 export const SubmitForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -105,4 +112,18 @@ export const SignUpBtn = styled.input`
   cursor: pointer;
   position: relative;
   left: -15%;
+`;
+
+export const SignInUpBtn = styled.button`
+  text-transform: uppercase;
+  outline: none;
+  border-style: none;
+  background-color: transparent;
+  color: #df6c7e;
+  font-size: 1.3rem;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 `;

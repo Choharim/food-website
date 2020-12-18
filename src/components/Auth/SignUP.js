@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  SignUpContainer,
   Container,
   SubmitForm,
   NameContainer,
@@ -18,9 +19,10 @@ import {
   CheckBox,
   CheckBoxText,
   SignUpBtn,
+  SignInUpBtn,
 } from "./SignUpElements";
 
-const SignUp = ({ setSuccess }) => {
+const SignUp = ({ setLogIn, setSignUp, signInUpToggel }) => {
   const [userName, setUserName] = useState("");
   const [userID, setUserID] = useState("");
   const [email, setEmail] = useState("");
@@ -36,7 +38,8 @@ const SignUp = ({ setSuccess }) => {
       setEmail("");
       setPassword("");
       setCheckBox(true);
-      setSuccess(true);
+      setLogIn(false);
+      setSignUp(true);
     }
   };
 
@@ -59,12 +62,15 @@ const SignUp = ({ setSuccess }) => {
     }
   };
 
-  const checkToggle = () => {
-    setCheckBox(!checkBox);
+  const checkToggle = (event) => {
+    const {
+      target: { checked },
+    } = event;
+    setCheckBox(checked);
   };
 
   return (
-    <>
+    <SignUpContainer>
       <SubmitForm onSubmit={handleSubmit}>
         <Container>
           <NameContainer>
@@ -113,7 +119,7 @@ const SignUp = ({ setSuccess }) => {
             type="checkbox"
             name="checkbox"
             checked={checkBox}
-            onClick={checkToggle}
+            onChange={checkToggle}
           ></CheckBox>
           <CheckBoxText>
             Create an account means you're okay with our Term of Service,
@@ -126,7 +132,8 @@ const SignUp = ({ setSuccess }) => {
           value="Create Account"
         />
       </SubmitForm>
-    </>
+      <SignInUpBtn onClick={signInUpToggel}>sign in</SignInUpBtn>
+    </SignUpContainer>
   );
 };
 

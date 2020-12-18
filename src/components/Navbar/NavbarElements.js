@@ -64,3 +64,12 @@ export const Login = styled(Link)`
 
   ${ChangeColor}
 `;
+
+export const LogOut = styled.button`
+  padding-right: 40px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
