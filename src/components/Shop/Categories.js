@@ -5,9 +5,9 @@ const Categories = ({ filterItems }) => {
   return (
     <>
       <ShopIcon>Shop</ShopIcon>
-      <AllBtn>All</AllBtn>
-      <DishBtn>수제 자연식</DishBtn>
-      <SnackBtn>수제 간식</SnackBtn>
+      <AllBtn onClick={() => filterItems("all")}>All</AllBtn>
+      <DishBtn onClick={() => filterItems("자연식")}>수제 자연식</DishBtn>
+      <SnackBtn onClick={() => filterItems("간식")}>수제 간식</SnackBtn>
     </>
   );
 };

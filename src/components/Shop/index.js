@@ -18,6 +18,10 @@ const Shop = () => {
   const [categories, setCategories] = useState([]);
 
   const filterItems = (category) => {
+    if (category === "all") {
+      setMenuItems(ShopData);
+      return;
+    }
     const newItems = ShopData.filter((item) => item.category === category);
     setMenuItems(newItems);
   };
